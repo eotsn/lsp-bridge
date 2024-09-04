@@ -5,5 +5,13 @@
     "typescript-language-server",
     "--stdio"
   ],
-  "settings": {}
+  "settings": {},
+  "initializationOptions": {
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "location": "/opt/homebrew/lib/node_modules/"
+      }
+    ]
+  }
 }
