@@ -544,9 +544,9 @@ Possible choices are basedpyright_ruff, pyright_ruff, pyright-background-analysi
     (dart-mode .                                                                 "dart-analysis-server")
     (scala-mode .                                                                "metals")
     ((js2-mode js-mode js-ts-mode rjsx-mode) .                                   "javascript")
-    (js-jsx-mode .                                                               "javascriptreact")
-    ((typescript-tsx-mode tsx-ts-mode) .                                         "typescriptreact")
-    ((typescript-mode typescript-ts-mode) .                                      "typescript")
+    ((js-jsx-mode jtsx-jsx-mode) .                                               "javascriptreact")
+    ((typescript-tsx-mode tsx-ts-mode jtsx-tsx-mode) .                           "typescriptreact")
+    ((typescript-mode typescript-ts-mode jtsx-typescript-mode) .                 "typescript")
     ((js-json-mode json-ts-mode json-mode) .                                     "vscode-json-language-server")
     (tuareg-mode .                                                               "ocamllsp")
     (erlang-mode .                                                               "erlang-ls")
@@ -689,6 +689,9 @@ Possible choices are basedpyright_ruff, pyright_ruff, pyright-background-analysi
     bash-ts-mode-hook
     typescript-ts-mode-hook
     tsx-ts-mode-hook
+    jtsx-jsx-mode
+    jtsx-tsx-mode
+    jtsx-typescript-mode
     go-ts-mode-hook
     yaml-ts-mode-hook
     svelte-mode-hook
@@ -752,6 +755,7 @@ you can customize `lsp-bridge-get-workspace-folder' to return workspace folder p
     (java-ts-mode               . java-ts-mode-indent-offset) ; Java
     (jde-mode                   . c-basic-offset)   ; Java (JDE)
     (js-mode                    . js-indent-level)  ; JavaScript
+    (jtsx-jsx-mode              . js-indent-level)  ; JavaScript
     (js2-mode                   . js2-basic-offset) ; JavaScript-IDE
     (js3-mode                   . js3-indent-level) ; JavaScript-IDE
     (json-mode                  . js-indent-level)  ; JSON
@@ -781,7 +785,9 @@ you can customize `lsp-bridge-get-workspace-folder' to return workspace folder p
     (pascal-mode                . pascal-indent-level)       ; Pascal
     (typescript-mode            . typescript-indent-level) ; Typescript
     (typescript-ts-mode         . typescript-ts-mode-indent-offset) ; Typescript
+    (jtsx-typescript-mode       . typescript-ts-mode-indent-offset) ; Typescript
     (tsx-ts-mode                . typescript-ts-mode-indent-offset) ; Typescript[TSX]
+    (jtsx-tsx-mode              . typescript-ts-mode-indent-offset) ; Typescript[TSX]
     (sh-mode                    . sh-basic-offset)   ; Shell Script
     (ruby-mode                  . ruby-indent-level) ; Ruby
     (ruby-ts-mode               . ruby-indent-level) ; Ruby
